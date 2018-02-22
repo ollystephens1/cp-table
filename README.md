@@ -6,7 +6,7 @@ Super simple HTML table generator for Agular
 `npm i cp-table -S`
 
 # Usage
-Once you import CpTableModule to your `app.module.ts` you can add `CpTables` to your template.
+Once you import `CpTableModule` to your `app.module.ts` you can add `CpTables` to your template.
 
 ```html
 <cp-table [dataSource]="dataSource">

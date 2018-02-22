@@ -1,6 +1,6 @@
 import { Component, ContentChildren, Input, Output, EventEmitter } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { TableColumnDirective } from '../table-column.directive';
+import { TableColumnDirective } from './table-column.directive';
 import { TableClickEvent } from './table.models';
 
 @Component({

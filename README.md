@@ -1,4 +1,4 @@
-Super simple HTML table generator for Agular
+A super simple HTML table generator for Angular
 
 [Live example]()
 
@@ -6,7 +6,7 @@ Super simple HTML table generator for Agular
 `npm i cp-table -S`
 
 # Usage
-Once you import `CpTableModule` to your `app.module.ts` you can add `CpTables` to your template.
+Once you import `CpTableModule` to your `app.module.ts`, you can add `CpTables` to your template.
 
 ```html
 <cp-table [dataSource]="dataSource">
@@ -16,8 +16,8 @@ Once you import `CpTableModule` to your `app.module.ts` you can add `CpTables` t
 ```
 
 ## Setting column title
-`CpTable` allows to set a different title to your columns. By default the column header will be the `key` name with a capital letter (ej: name will be Name).
-In some cases you want to use a different name for the table column. To achieve this you can add the `title` attribute to `cp-table-column`.
+`CpTable` allows you to set different titles your columns. By default, the column header will be the `key` name with a capital letter (ej: name will be Name).
+In cases where you want to use a different name for the table column, add the `title` attribute to `cp-table-column`.
 
 ```html
 <cp-table [dataSource]="dataSource">
@@ -27,7 +27,7 @@ In some cases you want to use a different name for the table column. To achieve 
 ```
 
 ## Using default values
-Not every column must have a value and sometimes you might want to use a default value for an specific table. You can do that using `empty` attribute.
+If a column doesn't need a value or if you want to use a default value for an specific column, you can use the `empty` attribute.
 
 ```html
 <cp-table [dataSource]="dataSource">
@@ -37,7 +37,7 @@ Not every column must have a value and sometimes you might want to use a default
 ```
 
 ## Formatting columns
-Some columns need special treatment. Imagine you want to format a column as a price using Angular [CurrencyPipe](https://angular.io/api/common/CurrencyPipe). You can add an array of `PipeTransform` classes to the `pipes` property of the column.
+Some columns need special treatment. Imagine you want to format a column as a price using Angular's [CurrencyPipe](https://angular.io/api/common/CurrencyPipe). You can add an array of `PipeTransform` classes to the `pipes` property of the column.
 
 ```typescript
 // app.component.ts
@@ -79,7 +79,7 @@ export class AppComponent  {
 ```
 
 ## Listening to events
-`CpTables` will trigger events on column click. `CpTables` has its own `TableClickEvent` that is an extension of `MouseEvent`.
+`CpTables` will trigger events on a column click. `CpTables` has its own `TableClickEvent` that is an extension of `MouseEvent`.
 
 ```typescript
 import { TableColumnDirective } from '../table-column.directive';

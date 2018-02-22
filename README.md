@@ -1,6 +1,6 @@
 A super simple HTML table generator for Angular
 
-[Live example]()
+[Live example](https://stackblitz.com/edit/cp-tables)
 
 # Installation
 `npm i cp-table -S`

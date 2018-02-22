@@ -1,12 +1,29 @@
 import { Component, ContentChildren, Input, Output, EventEmitter } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { TableColumnDirective } from '../table-column.directive';
+import { TableColumnDirective } from './table-column.directive';
 import { TableClickEvent } from './table.models';
 
 @Component({
+  moduleId: module.id,
   selector: 'cp-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  template: `
+    <table [ngClass]="ngClass" [class]="class">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" (click)="onHeaderClick($event, column)">
+          {{ column.title }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of dataSource; let i = index">
+        <td *ngFor="let column of columns" (click)="onRowClick($event, column, i)" [ngClass]="column.ngClass" [class]="column.class">
+          {{ resolve(row, column) }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  `
 })
 export class TableComponent {
   @Input() dataSource: Array<any>;

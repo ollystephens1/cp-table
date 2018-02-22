@@ -1,4 +1,4 @@
-import { TableColumnDirective } from '../table-column.directive';
+import { TableColumnDirective } from './table-column.directive';
 
 export interface TableClickEvent extends MouseEvent {
   column: TableColumnDirective;
